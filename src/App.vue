@@ -6,58 +6,80 @@
         <div class="header">
           <p>广东青年职业学院网络数据中心</p>
           <p>
-            <a href="#">登录</a>|
-            <a href="#">注册</a>&nbsp;&nbsp;
-            <a href="#">管理员登录</a>
+            <router-link to="/login">登录</router-link>
           </p>
-        </div>
-        </el-col>
-    </el-row>
-    <!-- 导航栏 -->
-    <el-row :gutter="0">
-      <el-col :xs="{span:24,offset:0}" :sm="{span:8,offset:2}"><img src="./assets/images/gqing.png" alt=""></el-col>
-      <el-col :xs="{span:24,offset:0}" :sm="{span:11,offset:3}">
-        <div class="nav">
-          <el-menu
-            :default-active="activeIndex"
-            class="el-menu-demo"
-            mode="horizontal"
-            @select="handleSelect"
-          >
-            <el-menu-item index="1"><router-link to="/home">首页</router-link></el-menu-item>
-            <el-menu-item index="2"><a>公告通知</a></el-menu-item>
-            <el-menu-item index="3"><a>保修大厅</a></el-menu-item>
-            <el-menu-item index="4"><a>帮助中心</a></el-menu-item>
-          </el-menu>
         </div>
       </el-col>
     </el-row>
+    <!-- 导航栏 -->
+    <div class="max-nav">
+      <el-row :gutter="0">
+        <el-col :xs="{span:24,offset:0}" :sm="{span:8,offset:0}">
+          <div class="gqing"></div>
+        </el-col>
+        <el-col :xs="{span:24,offset:0}" :sm="{span:10,offset:6}">
+          <div class="nav">
+            <el-menu
+              :default-active="activeIndex"
+              class="el-menu-demo"
+              mode="horizontal"
+              @select="handleSelect"
+            >
+              <el-menu-item index="1">
+                <router-link to="/home">首页</router-link>
+              </el-menu-item>
+              <el-menu-item index="2">
+                <router-link to="/notice">公告通知</router-link>
+              </el-menu-item>
+              <el-menu-item index="3">
+                <router-link to="/table">保修大厅</router-link>
+              </el-menu-item>
+              <el-menu-item index="4">
+                <router-link to="/help">帮助中心</router-link>
+              </el-menu-item>
+            </el-menu>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
     <!-- banner -->
     <el-row>
-      <el-col :span="24"><div class="top"></div></el-col>
-      <el-col class="banner-top" :span="24"><div class="banner"></div></el-col>
-      <el-col class="bar" :span="24"><p>广东青年职业学院|网络数据中心服务平台为你提供优质的服务</p></el-col>
+      <el-col class="banner-top" :span="24">
+        <img class="banner" src="./assets/images/banner.jpg" />
+      </el-col>
+      <el-col class="bar" :span="24">
+        <p>广东青年职业学院|网络数据中心服务平台为你提供优质的服务</p>
+      </el-col>
     </el-row>
 
     <!-- 中间路由展示区域 -->
     <router-view></router-view>
-    
+
     <!-- 底部footer区域 -->
     <el-row>
       <el-col :span="24">
         <div class="footer">
-            <ul>
-              <li><a href="#">友情链接</a>|</li>
-              <li><a href="#">友情链接</a>|</li>
-              <li><a href="#">友情链接</a>|</li>
-              <li><a href="#">友情链接</a>|</li>
-              <li><a href="#">友情链接</a></li>
-            </ul>
-            <p>Copyright ©2019 by 广东青年职业学院</p>
+          <ul>
+            <li>
+              <a href="#">友情链接</a>|
+            </li>
+            <li>
+              <a href="#">友情链接</a>|
+            </li>
+            <li>
+              <a href="#">友情链接</a>|
+            </li>
+            <li>
+              <a href="#">友情链接</a>|
+            </li>
+            <li>
+              <a href="#">友情链接</a>
+            </li>
+          </ul>
+          <p>Copyright ©2019 by 广东青年职业学院</p>
         </div>
       </el-col>
     </el-row>
-
   </div>
 </template>
 <script>
@@ -74,21 +96,29 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-*{
+<style lang="scss">
+* {
   margin: 0;
   padding: 0;
 }
-a{
+a {
   color: black;
   text-decoration: none;
 }
-img{
+img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
-
-.header{
+.gqing{
+  width: 100%;
+  height: 60px;
+  background:url(./assets/images/gqing.jpg) 100% 50% /contain no-repeat scroll ;
+}
+#app {
+  overflow-x: hidden;
+  font-family: "微软雅黑";
+}
+.header {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
@@ -99,68 +129,73 @@ img{
   height: 20px;
   line-height: 20px;
   color: #909399;
+  p {
+    a {
+      color: #909399;
+    }
+    a:hover {
+      color: black;
+    }
+  }
 }
-.nav{
-  margin-bottom: 2px; 
-  width:100%;
-  ul{
-    li{
-      margin-right:-10px;
+/*导航栏移动端响应式*/
+.max-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav {
+  margin-bottom: 2px;
+  width: 100%;
+  ul {
+    li {
+      width: 24%;
+      padding: 0;
+      text-align: center;
+      a {
+        font-size: 1.15em;
+      }
     }
   }
 }
 .el-menu.el-menu--horizontal {
-    border-bottom:none !important;
-    display:flex;
-     flex-flow:nowrap;
+  border-bottom: none !important;
+  display: flex;
+  flex-flow: nowrap;
 }
-.top{
-  background: url(./assets/images/top.jpg) 50% 50% / cover no-repeat;
-  width: 100%;
-  height: 46px;
-}
-.banner-top{
+.banner-top {
   margin-top: -4px;
 }
-.banner{
-  background: url(./assets/images/banner.jpg) 50% 70% / cover no-repeat;
-  width: 100%;
-  height: 280px;
-  transform: scale(1);
-}
-.bar{
+.bar {
   background-color: #eee;
   font-size: 12px;
-  height: 26px;
   line-height: 26px;
   margin-top: -4px;
   padding-left: 4%;
   color: #909399;
 }
-.footer{
+.footer {
   width: 100%;
-  height: 60px;
+  height: 80px;
   background-color: #0075a9;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  text-align:center;
-  font-size:14px;
-  color:#fff;
-  ul{
-    margin:0 auto;
-    li{
-      float:left;
-      list-style:none;
-      a{
-        margin:4px;
-        color:#fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  ul {
+    margin: 0 auto;
+    li {
+      float: left;
+      list-style: none;
+      a {
+        margin: 4px;
+        color: #fff;
       }
+    }
   }
-  } 
-  p{
-    margin-top:4px;
+  p {
+    margin-top: 4px;
   }
 }
-
 </style>
