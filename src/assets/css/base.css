@@ -1,0 +1,32 @@
+span {
+    display: block;
+    text-align: center;
+    cursor: default;
+}
+
+
+body {
+    display: block;
+}
+
+td {
+    color: #000;
+    border-bottom: 1px solid #E6E6E6;
+    border-top: 1px solid #E6E6E6;
+}
+
+button {
+    display: inline-block;
+    height: 25px;
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: #0075a9;
+    color: white;
+}

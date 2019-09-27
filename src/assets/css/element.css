@@ -1,0 +1,76 @@
+.block_top {
+    border-bottom: 2px solid #0075a9;
+    margin-bottom: 30px;
+}
+
+.block_top span {
+    display: inline-block;
+    color: #0075a9;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.block {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.block:after{
+    content: "";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    display: block;
+    visibility: hidden;
+}
+
+.block .item {
+    float: right;
+    width: 1050px;
+    height: 43px;
+    text-align: left;
+    line-height: 42px;
+    padding-left: 36px;
+    border-left: 2px solid #0075a9;
+    color: #666666;
+}
+
+.block .item tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+.block .item tr:nth-child(even) {
+    background: #f6f4f0;
+}
+
+.side_item {
+    float: left;
+    margin-bottom: 50px;
+    font-weight:bold;
+}
+
+.side_item a {
+    width: 300px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.side_item a:hover{
+    background: #0075a9;
+    color: #ffffff;
+    transition-duration: 0.2s;
+}
+
+.block .item td:nth-child(1){
+    width: 160px;
+}
+.block .item td:nth-child(2){
+    width: 400px;
+}
+.block .item td:nth-child(3){
+    width: 200px;
+}
+.block .item td:nth-child(4){
+    width: 178px;
+}
