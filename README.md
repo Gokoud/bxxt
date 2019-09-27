@@ -1,4 +1,4 @@
-# bxxt
+# 广东青年职业学院——网络报修系统
 
 本保修系统使用了 Vue.js,Vue-Cli,Vue-router，axios和element-ui进行前端构建。
 
