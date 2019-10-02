@@ -37,10 +37,10 @@
       <el-col :xs="{span:24,offset:0}" :sm="{span:20,offset:0}">
         <div>
           <el-table :data="tableData" stripe style="width: 100%">
-            <el-table-column fixed prop="stuId" label="学号" width="170px"></el-table-column>
-            <el-table-column prop="causal" label="报修原因" width="300px"></el-table-column>
-            <el-table-column prop="time" label="报修时间"></el-table-column>
-            <el-table-column prop="name" label="维修处理人"></el-table-column>
+            <el-table-column fixed prop="stuId" label="学号" width="120" ></el-table-column>
+            <el-table-column prop="causal" label="报修原因" width="350"></el-table-column>
+            <el-table-column prop="time" label="报修时间" min-width="100"></el-table-column>
+            <el-table-column prop="name" label="维修处理人" min-width="100"></el-table-column>
             <el-table-column fixed="right" prop="status" label="报修状态"></el-table-column>
           </el-table>
         </div>
@@ -49,7 +49,7 @@
     <!--分页组件-->
     <el-row class="page">
       <el-col  :sm="{span:10,offset:8}">
-        <el-pagination small="false" background layout="prev ,pager,next" :total="100"></el-pagination>
+        <el-pagination small background layout="prev ,pager,next" :total="100"></el-pagination>
       </el-col>
     </el-row>
   </div>
@@ -114,7 +114,7 @@ export default {
 .page {
   margin: 10px auto;
 }
-  @media screen and (max-width: 765px){
+  @media screen and (max-width: 768px){
     .search-box {
       display: flex;
       margin: 10px 0;
@@ -128,4 +128,11 @@ export default {
       }
     }
   }
+.el-pagination {
+  white-space: nowrap;
+  width: 280px;
+  margin: 0 auto;
+  color: #303133;
+  font-weight: 700;
+}
 </style>
