@@ -47,9 +47,9 @@
       </el-col>
     </el-row>
     <!--分页组件-->
-    <el-row class="magrintop">
+    <el-row class="page">
       <el-col  :sm="{span:10,offset:8}">
-        <el-pagination background layout="prev, pager, next" :total="100"></el-pagination>
+        <el-pagination small="false" background layout="prev ,pager,next" :total="100"></el-pagination>
       </el-col>
     </el-row>
   </div>
@@ -111,6 +111,9 @@ export default {
       font-weight: bold;
     }
   }
+.page {
+  margin: 10px auto;
+}
   @media screen and (max-width: 765px){
     .search-box {
       display: flex;

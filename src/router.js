@@ -17,8 +17,8 @@ export default new Router({
     { path :'/login',component: login },
     { path:'/table', component:table },
     { path: '/home/form', component:form, name: 'form'  },
-      {path: '/help' ,component:help},
-      { path :'/notice',component:notice }
+    {path: '/help' ,component:help},
+    { path :'/notice',component:notice }
 
     // {
     //   // path: '',
