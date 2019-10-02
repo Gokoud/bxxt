@@ -1,5 +1,5 @@
 <template>
-    <div id="container">
+    <el-row>
     <div class="cont ">
         <div class="l_c hidden-xs-only">
             <img src="../../assets/images/show.jpg" alt="展示图">
@@ -9,7 +9,7 @@
                 <div class="r_head"></div>
                 <div class="r_main">
                     <div>
-                        <input name="username_1" type="text" class="input_name" placeholder="请输入用户名">
+                        <input  name="username_1" type="text" class="input_name" placeholder="请输入用户名">
                     </div>
                     <div>
                         <input name="password" type="text" class="input_psw" placeholder="请输入密码">
@@ -20,8 +20,7 @@
             </div>
         </div>
     </div>
-
-    </div>
+    </el-row>
 </template>
 
 
@@ -43,19 +42,14 @@
     }
 
     input {
-        width: 186px;
+        width: 200px;
         height: 50px;
         line-height: 50px;
         padding: 0 0 0 48px;
         outline: none;
+        cursor: text;
     }
-    a {
-        display: block;
-        text-decoration: none;
-        outline: none;
-        cursor: pointer;
-        color: #333;
-    }
+
     /*class*/
     .cont {
         width: 1000px;
@@ -116,7 +110,7 @@
         }
     }
     /*响应式*/
-    @media screen and (max-width:786px) {
+    @media screen and (max-width:768px) {
         .cont {
             width: 324px;
             margin: 20px auto;

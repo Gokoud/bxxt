@@ -40,13 +40,12 @@
         },
         methods: {
             handleClick(tab,event) {
-                console.log(tab,event);
             }
         }
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     #container {
         max-width: 1200px;
         margin: 20px auto;
@@ -92,10 +91,16 @@
             }
         }
     }
-    @media screen and (max-width: 990px) {
+    @media screen and (max-width: 768px) {
         .el-container {
             width: 100%;
             margin: 0;
+            .el-tabs--top .el-tabs__item.is-top:nth-child(2) {
+                padding-left: 20px;
+            }
+            .el-tabs--top .el-tabs__item.is-top:last-child {
+                padding-right: 20px;
+            }
             .phone-tab {
                 width: 100%;
                 .title-header{
