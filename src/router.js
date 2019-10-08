@@ -7,7 +7,7 @@ import table from './components/navmenu/table.vue'
 import form from './components/sun/form.vue'
 import login from './components/navmenu/login'
 import help from './components/navmenu/help'
-import notice from './components/navmenu/notice'
+import notice_list from './components/navmenu/notice_list'
 
 
 export default new Router({
@@ -18,7 +18,7 @@ export default new Router({
     { path:'/table', component:table },
     { path: '/home/form', component:form, name: 'form'  },
     {path: '/help' ,component:help},
-    { path :'/notice',component:notice }
+    { path :'/notice_list',component:notice_list }
 
     // {
     //   // path: '',

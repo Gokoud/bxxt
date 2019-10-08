@@ -29,7 +29,7 @@
                 <router-link to="/home">首页</router-link>
               </el-menu-item>
               <el-menu-item index="2">
-                <router-link to="/notice">公告通知</router-link>
+                <router-link to="/notice_list">公告通知</router-link>
               </el-menu-item>
               <el-menu-item index="3">
                 <router-link to="/table">保修大厅</router-link>
