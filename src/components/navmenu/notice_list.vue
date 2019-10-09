@@ -111,10 +111,23 @@
             margin-left:20px ;
             border: 1px ;
             .table {
+
+                li:nth-child(even){
+                    background: #f8f6f2;
+                }
+                li:hover{
+                    background: #fcfaf6;
+                }
                 margin:0 30px;
                 line-height: 40px;
                 p {
                     float: right;
+                }
+                a {
+                    width: 70%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 a:active {
                     color: #0075a9;
@@ -151,6 +164,9 @@
             .repair_notice {
                 margin: 0;
                 width: 100%;
+                li {
+                    display: flex;
+                }
             }
         }
     }
